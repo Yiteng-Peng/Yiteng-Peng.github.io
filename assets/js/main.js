@@ -104,7 +104,7 @@
 		//**===================Typed-word ===================**//	
 		
 			var typed = new Typed('.typed-word', {
-				strings: ["Major in CS", "Interested in Software Engineering", "Interested in Computer Security" ,"Interested in Math"],
+				strings: ["Interested in Software Engineering", "Interested in Computer Security"],
 				typeSpeed: 40,
 				backSpeed: 40,
 				backDelay: 2000,
