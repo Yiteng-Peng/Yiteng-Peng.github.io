@@ -28,7 +28,6 @@ jobs:
           node-version: ${{ matrix.node-version }} # 版本
       - name: Build-and-deploy # 步骤3
         run: |
-          remote_addr=`git remote get-url --push origin`
           commit_info=`git describe --all --always --long`
           user_name=`git log -1 --pretty=format:'%an'`
           user_email=`git log -1 --pretty=format:'%ae'`
@@ -43,7 +42,9 @@ jobs:
           git config user.email ${user_email}
           git add -A
           git commit -m "auto deploy, $commit_info"
+          remote_addr=`git remote get-url --push origin`
           remote_addr=`echo $remote_addr | awk -F'://' '{print $2}'`
+          echo ${user_name}
           echo ${remote_addr}
           remote_addr=https://${user_name}:${{secrets.GITHUB_TOKEN}}@${remote_addr}
           git remote add origin ${remote_addr}
