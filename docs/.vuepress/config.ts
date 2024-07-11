@@ -172,7 +172,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 博主信息 (显示在首页侧边栏)
     blogger: {
-      avatar: '/img/avatar.png',
+      avatar: '/blog/img/avatar.png',
       name: 'Yiteng Peng',
       mailaddr: 'ypengbp [AT] cse.ust.hk',
       // slogan: '谋士以身入局，举棋胜天半子。',
@@ -221,7 +221,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
   // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
   head: [
-    ['link', { rel: 'icon', href: '/img/logo.png' }], //favicons，资源放在public文件夹
+    ['link', { rel: 'icon', href: '/img/logo.png', type: "image/x-icon"}], //favicons，资源放在public文件夹
     [
       'meta',
       {
