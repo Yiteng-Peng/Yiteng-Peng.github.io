@@ -28,10 +28,6 @@ bannerBg: /img/landscape.png
 # hideRightBar: true # 是否隐藏右侧边栏
 ---
 
-
-<!-- 小熊猫 -->
-<!-- <img src="/img/panda-waving.png" class="panda no-zoom" style="width: 130px;height: 115px;opacity: 0.8;margin-bottom: -4px;padding-bottom:0;position: fixed;bottom: 0;left: 0.5rem;z-index: 1;"> -->
-
 <!--
 ## 关于
 
@@ -59,29 +55,3 @@ bannerBg: /img/landscape.png
 
 #### Demo演示模块
    为了更直观的展示一些代码的效果，博客添加了demo模块插件，可查看demo、源码，以及跳转到codepen在线编辑。**示例**：
-
-::: demo [vanilla]
-```html
-<html>
-  <div id="vanilla-box"></div>
-</html>
-<script>
-  var box = document.getElementById('vanilla-box')
-  box.innerHTML = 'Hello World! Welcome to EB'
-</script>
-<style>
-#vanilla-box {
-  color: #11a8cd;
-}
-</style>
-```
-:::
-
-
-## :email: 联系
-
-- **WeChat or QQ**: <a href="tencent://message/?uin=894072666&Site=&Menu=yesUrl" class='qq'>894072666</a>
-- **Email**: <a href="mailto:894072666@qq.com">894072666@qq.com</a>
-- **GitHub**: <https://github.com/xugaoyi>
-
-</br>  -->
