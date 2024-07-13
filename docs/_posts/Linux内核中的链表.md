@@ -9,15 +9,18 @@ tags:
 
 <https://blog.csdn.net/m0_74282605/article/details/128037229>
 
+（发现上面的博客似乎是参考的这个：<https://zhuanlan.zhihu.com/p/546898343>，且图片也是用的这个里面的，而且CSDN不支持外链图片。好嘛，那我直接引用原文图片地址。）
+
 本人对这种“妙啊”的东西很感兴趣，于是打算学一学。
 
 对应的源代码：[<linux/list.h>](https://github.com/torvalds/linux/blob/master/include/linux/list.h)
 
 传统链表和内核链表的区别原博客中给了两个很形象的图，我这里援引过来：
 
-![传统链表](https://img-blog.csdnimg.cn/img_convert/06981b3ff14697d4c8a289519ef742ae.png)
+> ![传统链表](https://pic1.zhimg.com/80/v2-f2c6468e3311624f9350071a693592d8_720w.webp)
 
-![内核链表](https://img-blog.csdnimg.cn/img_convert/65c478429cad1a3b15a236b1167f4ff2.webp?x-oss-process=image/format,png)
+> ![内核链表](https://pic3.zhimg.com/80/v2-02658d437338f8570d13ff990d2d8b0a_720w.webp)
+
 
 也就是说，相比于传统的 *对于不同的问题 数据个数和类型也不同* 的链表Node，内核中的实现方法将一个**不定**的问题转化为了一个确定性的问题：每个Node的大小都是完全一致的，均只包含两个指针：
 
