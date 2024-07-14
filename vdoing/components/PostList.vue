@@ -54,7 +54,7 @@
             </span>
             <span
               title="标签"
-              class="iconfont icon-biaoqian tags"
+              class="iconfont icon-xianbiaoqian tags"
               v-if="
                 $themeConfig.tag !== false &&
                 item.frontmatter.tags &&

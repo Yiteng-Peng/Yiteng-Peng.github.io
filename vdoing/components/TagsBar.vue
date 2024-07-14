@@ -2,7 +2,7 @@
   <div class="tags-wrapper card-box">
     <router-link
       to="/tags/"
-      class="title iconfont icon-biaoqian1"
+      class="title iconfont icon-biaoqian"
       title="全部标签"
     >{{ length === 'all' ? '全部标签' : '标签分类' }}</router-link>
     <div class="tags">
