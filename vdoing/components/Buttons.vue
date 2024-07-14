@@ -16,7 +16,7 @@
     />
     <div
       title="主题模式"
-      class="button blur theme-mode-but iconfont icon-zhuti"
+      class="button blur theme-mode-but iconfont icon-zhutimoshi"
       @mouseenter="showModeBox = true"
       @mouseleave="showModeBox = false"
       @click="showModeBox = true"
