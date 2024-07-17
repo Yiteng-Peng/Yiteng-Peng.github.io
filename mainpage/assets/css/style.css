@@ -101,7 +101,7 @@ a:focus, .btn:focus {
 	outline: none;
 }
 a:hover, a:active {
-	color: var(--thm-base);
+	color: var(--thm-gray);
 	text-decoration: none;
 	outline: 0;
 }
