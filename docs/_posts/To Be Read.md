@@ -13,3 +13,5 @@ sticky: 1
 - Randomized Testing of Byzantine Fault Tolerant Algorithms
 
 - LOKI: State-Aware Fuzzing Framework for the Implementation of Blockchain Consensus Protocols
+
+- EMS: History-Driven Mutation for Coverage-based Fuzzing
