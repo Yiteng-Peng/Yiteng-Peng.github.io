@@ -20,6 +20,14 @@ Version      : 1.0
 * 01.GENERAL STYLE
 * ----------------------------------------------------------------------------------------
 */
+ohln{ /* oriange high light name */
+	color: #ff8402;
+	text-decoration:underline;
+}
+bhln{ /* blue high light name */
+	color: #2b1d6a;
+	text-decoration:underline;
+}
 html{
 	overflow-x: hidden;
 	height: 100%;
