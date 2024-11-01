@@ -87,7 +87,11 @@
 
 @media only screen and (max-width: 767px) {
 	.atf-home-area .atf_home_img2 img {
-		border-radius: 50%;
+		/* border-radius: 50%; */
+		clip-path: circle(50% at center);
+		width: 100%; /* 设置图片宽度 */
+		height: auto; /* 设置图片高度 */
+		object-fit: cover; /* 保持图片比例并填充 */
 	}
 	.navbar-navs.navbar-expend .menu-nav,
 	.navbar-navs.navbar-collaps .menu-nav{
