@@ -20,6 +20,7 @@ Version      : 1.0
 * 01.GENERAL STYLE
 * ----------------------------------------------------------------------------------------
 */
+/* My style */
 ohln{ /* oriange high light name */
 	color: #ff8402;
 	text-decoration:underline;
@@ -28,6 +29,14 @@ bhln{ /* blue high light name */
 	color: #2b1d6a;
 	text-decoration:underline;
 }
+.gray-background {
+	display: inline;
+	background-color: lightgray;
+	padding: 0.2px;
+	border-radius: 5px;
+}
+
+
 html{
 	overflow-x: hidden;
 	height: 100%;
