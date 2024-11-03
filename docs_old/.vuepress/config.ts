@@ -239,6 +239,20 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
     //   },
     // ], // 网站关联Google AdSense 与 html格式广告支持（你可以去掉）
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css",
+      },
+    ], // 让md支持数学公式
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js",
+      },
+    ], // 让md支持数学公式
   ],
 
 
@@ -344,15 +358,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
-    [
-      'vuepress-plugin-mathjax', // markdown数学公式
-      {
-        target: 'svg',
-        macros: {
-          '*': '\\times',
-        },
-      },
-    ],
+    // [
+    //   'vuepress-plugin-mathjax', // markdown数学公式
+    //   {
+    //     target: 'svg',
+    //     macros: {
+    //       '*': '\\times',
+    //     },
+    //   },
+    // ],
   ],
 
   markdown: {

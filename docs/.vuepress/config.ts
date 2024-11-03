@@ -6,6 +6,7 @@ import { defineConfig4CustomTheme, UserPlugins } from 'vuepress/config'
 import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types'
 import dayjs from 'dayjs'
 import htmlModules from './config/htmlModules' // 自定义插入的html块
+import { katex } from '@mdit/plugin-katex'
 
 const DOMAIN_NAME = 'www.pengyiteng.com' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
@@ -239,8 +240,28 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
     //   },
     // ], // 网站关联Google AdSense 与 html格式广告支持（你可以去掉）
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css",
+      },
+    ], // 让md支持数学公式
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js",
+      },
+    ], // 让md支持数学公式
   ],
 
+  markdown: {
+    extendMarkdown: (md) => {
+      md.use(katex);
+      md.linkify.set({ fuzzyEmail: false });
+    },
+  },    
 
   // 插件配置
   plugins: <UserPlugins>[
@@ -344,15 +365,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
-    [
-      'vuepress-plugin-mathjax', // markdown数学公式
-      {
-        target: 'svg',
-        macros: {
-          '*': '\\times',
-        },
-      },
-    ],
+    // [
+    //   'vuepress-plugin-mathjax', // markdown数学公式
+    //   {
+    //     target: 'svg',
+    //     macros: {
+    //       '*': '\\times',
+    //     },
+    //   },
+    // ],
   ],
 
   markdown: {
