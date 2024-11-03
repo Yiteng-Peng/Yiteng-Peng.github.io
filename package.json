@@ -13,6 +13,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@mdit/plugin-katex": "^0.13.1",
     "dayjs": "^1.9.7",
     "inquirer": "^7.1.0",
     "json2yaml": "^1.1.0",
@@ -22,7 +23,6 @@
     "vuepress-plugin-comment": "^0.7.3",
     "vuepress-plugin-demo-block": "^0.7.2",
     "vuepress-plugin-fulltext-search": "^2.2.1",
-    "vuepress-plugin-mathjax": "^1.2.8",
     "vuepress-plugin-one-click-copy": "^1.0.2",
     "vuepress-plugin-sitemap": "^2.3.1",
     "vuepress-plugin-thirdparty-search": "^1.0.2",
@@ -31,7 +31,6 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
-    "@mdit/plugin-katex": "^0.13.1",
     "watchman": "^1.0.0"
   }
 }

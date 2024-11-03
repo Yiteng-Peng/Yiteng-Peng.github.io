@@ -254,14 +254,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         href: "https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js",
       },
     ], // 让md支持数学公式
-  ],
-
-  markdown: {
-    extendMarkdown: (md) => {
-      md.use(katex);
-      md.linkify.set({ fuzzyEmail: false });
-    },
-  },    
+  ],  
 
   // 插件配置
   plugins: <UserPlugins>[
@@ -379,6 +372,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   markdown: {
     lineNumbers: true,
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3']
+    extendMarkdown: (md) => {
+      md.use(katex);
+      md.linkify.set({ fuzzyEmail: false });
+    },
   },
 
   // 监听文件变化并重新构建
