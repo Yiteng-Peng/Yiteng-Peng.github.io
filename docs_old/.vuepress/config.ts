@@ -344,6 +344,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
+    [
+      'vuepress-plugin-mathjax', // markdown数学公式
+      {
+        target: 'svg',
+        macros: {
+          '*': '\\times',
+        },
+      },
+    ],
   ],
 
   markdown: {
