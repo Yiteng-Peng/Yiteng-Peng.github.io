@@ -2,9 +2,12 @@ var publication_lists = [
     { content: "MTZK: Testing and Exploring Bugs in Zero-Knowledge (ZK) Compilers", 
         author: "Dongwei Xiao, Zhibo Liu, <ohln>Yiteng Peng</ohln>, and Shuai Wang.",
         conf: "NDSS 2025" },
-    { content: "Testing and Understanding Deviation Behaviors in FHE-hardened Machine Learning Models.", 
+    { content: "Testing and Understanding Deviation Behaviors in FHE-hardened Machine Learning Models", 
         author: "<ohln>Yiteng Peng</ohln>, Daoyuan Wu, Zhibo Liu, Dongwei Xiao, Zhenlan Ji, Juergen Rahmel, and Shuai Wang.",
         conf: "ICSE 2025" },
+    { content: "Divergence-aware Testing of Graphics Shader Compiler Back-ends", 
+        author: "Dongwei Xiao, Shuai Wang, Zhibo Liu, <ohln>Yiteng Peng</ohln>, Daoyuan Wu, and Zhendong Su.",
+        conf: "PLDI 2025" },
 ];
 
 // 获取包含这些内容的容器元素
