@@ -8,6 +8,9 @@ var publication_lists = [
     { content: "Divergence-aware Testing of Graphics Shader Compiler Back-ends", 
         author: "Dongwei Xiao, Shuai Wang, Zhibo Liu, <ohln>Yiteng Peng</ohln>, Daoyuan Wu, and Zhendong Su.",
         conf: "PLDI 2025" },
+    { content: "Extraction and Mutation at a High Level: Template-Based Fuzzing for JavaScript Engines", 
+        author: "Wai Kin Wong, Dongwei Xiao, Cheuk Tung Lai, <ohln>Yiteng Peng</ohln>, Daoyuan Wu, and Shuai Wang.",
+        conf: "OOPSLA 2025" },
 ];
 
 // 获取包含这些内容的容器元素
