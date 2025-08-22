@@ -11,6 +11,9 @@ var publication_lists = [
     { content: "Extraction and Mutation at a High Level: Template-Based Fuzzing for JavaScript Engines", 
         author: "Wai Kin Wong, Dongwei Xiao, Cheuk Tung Lai, <ohln>Yiteng Peng</ohln>, Daoyuan Wu, and Shuai Wang.",
         conf: "OOPSLA 2025" },
+    { content: "The Phantom Menace in Crypto-Based PET-Hardened Deep Learning Models: Invisible Configuration-Induced Attacks", 
+        author: "<ohln>Yiteng Peng</ohln>, Dongwei Xiao, Zhibo Liu, Zhenlan Ji, Daoyuan Wu, Shuai Wang, and Juergen Rahmel.",
+        conf: "CCS 2025" },
 ];
 
 // 获取包含这些内容的容器元素
