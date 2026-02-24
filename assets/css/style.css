@@ -36,6 +36,126 @@ bhln{ /* blue high light name */
 	border-radius: 5px;
 }
 
+/* Publication section: reduce gap between title and list */
+#publication .atf-section-title {
+	margin-bottom: 16px;
+}
+
+/* Publication item layout */
+.pub-item {
+	margin-bottom: 0px;
+}
+.pub-item .atf-about-content {
+	position: relative;
+	padding: 12px 20px 10px 20px;
+	border-left: 3px solid var(--thm-base);
+	background: #fafafa;
+	border-radius: 0 6px 6px 0;
+}
+.pub-body {
+	text-align: center;
+}
+.pub-title {
+	font-size: 24px !important;
+	font-weight: 700;
+	padding: 0 !important;
+	margin-bottom: 0px !important;
+	line-height: 1.45;
+	color: #222;
+}
+.pub-authors {
+	font-size: 16px;
+	font-weight: 700;
+	color: #444;
+	margin-bottom: 8px;
+	line-height: 1.6;
+}
+.pub-footer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+/* Conference name badge */
+.pub-conf-badge {
+	display: inline-flex;
+	align-items: stretch;
+	border-radius: 4px;
+	overflow: hidden;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 1;
+}
+.pub-conf-name {
+	background: #2b1d6a;
+	color: #fff;
+	padding: 4px 8px;
+	letter-spacing: 0.3px;
+}
+.pub-conf-year {
+	background: #4a3a8a;
+	color: #ddd;
+	padding: 4px 7px;
+	font-weight: 400;
+}
+
+/* Rank badge */
+.pub-rank-badge {
+	display: inline-block;
+	border-radius: 4px;
+	font-size: 11px;
+	font-weight: 700;
+	padding: 3px 8px;
+	letter-spacing: 0.3px;
+}
+.pub-rank-ccfa {
+	background: #c0392b;
+	color: #fff;
+}
+
+/* Paper PDF button */
+.pub-paper-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	background: var(--thm-base);
+	color: #fff !important;
+	font-size: 11px;
+	font-weight: 600;
+	padding: 3px 10px;
+	border-radius: 4px;
+	text-decoration: none !important;
+	transition: background 0.2s;
+}
+.pub-paper-btn:hover {
+	background: #e07200;
+	color: #fff !important;
+}
+
+/* Corresponding author mark */
+.corr-mark {
+	color: var(--thm-base);
+	font-weight: 700;
+	font-size: 11px;
+	top: -0.4em;
+}
+
+/* Publication legend */
+.pub-legend {
+	font-size: 12px;
+	color: #aaa;
+	margin-top: 4px;
+	margin-bottom: 0;
+	text-align: right;
+}
+.pub-legend .corr-mark {
+	font-size: 12px;
+	position: relative;
+	top: -0.3em;
+}
+
 
 html{
 	overflow-x: hidden;

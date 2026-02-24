@@ -1,36 +1,99 @@
 var publication_lists = [
-    { content: "MTZK: Testing and Exploring Bugs in Zero-Knowledge (ZK) Compilers", 
+    {
+        content: "MTZK: Testing and Exploring Bugs in Zero-Knowledge (ZK) Compilers",
         author: "Dongwei Xiao, Zhibo Liu, <ohln>Yiteng Peng</ohln>, and Shuai Wang.",
-        conf: "NDSS 2025" },
-    { content: "Testing and Understanding Deviation Behaviors in FHE-hardened Machine Learning Models", 
+        conf: "NDSS",
+        year: "2025",
+        rank: "CCF-A",
+        paper: "https://dx.doi.org/10.14722/ndss.2025.230530",
+    },
+    {
+        content: "Testing and Understanding Deviation Behaviors in FHE-hardened Machine Learning Models",
         author: "<ohln>Yiteng Peng</ohln>, Daoyuan Wu, Zhibo Liu, Dongwei Xiao, Zhenlan Ji, Juergen Rahmel, and Shuai Wang.",
-        conf: "ICSE 2025" },
-    { content: "Divergence-aware Testing of Graphics Shader Compiler Back-ends", 
+        conf: "ICSE",
+        year: "2025",
+        rank: "CCF-A",
+        paper: "https://doi.org/10.1109/ICSE55347.2025.00107",
+    },
+    {
+        content: "Divergence-aware Testing of Graphics Shader Compiler Back-ends",
         author: "Dongwei Xiao, Shuai Wang, Zhibo Liu, <ohln>Yiteng Peng</ohln>, Daoyuan Wu, and Zhendong Su.",
-        conf: "PLDI 2025" },
-    { content: "Extraction and Mutation at a High Level: Template-Based Fuzzing for JavaScript Engines", 
+        conf: "PLDI",
+        year: "2025",
+        rank: "CCF-A",
+        paper: "https://doi.org/10.1145/3729305",
+    },
+    {
+        content: "Extraction and Mutation at a High Level: Template-Based Fuzzing for JavaScript Engines",
         author: "Wai Kin Wong, Dongwei Xiao, Cheuk Tung Lai, <ohln>Yiteng Peng</ohln>, Daoyuan Wu, and Shuai Wang.",
-        conf: "OOPSLA 2025" },
-    { content: "The Phantom Menace in Crypto-Based PET-Hardened Deep Learning Models: Invisible Configuration-Induced Attacks", 
+        conf: "OOPSLA",
+        year: "2025",
+        rank: "CCF-A",
+        paper: "https://doi.org/10.1145/3763154",
+    },
+    {
+        content: "The Phantom Menace in Crypto-Based PET-Hardened Deep Learning Models: Invisible Configuration-Induced Attacks",
         author: "<ohln>Yiteng Peng</ohln>, Dongwei Xiao, Zhibo Liu, Zhenlan Ji, Daoyuan Wu, Shuai Wang, and Juergen Rahmel.",
-        conf: "CCS 2025" },
+        conf: "CCS",
+        year: "2025",
+        rank: "CCF-A",
+        paper: "https://doi.org/10.1145/3719027.3765107",
+    },
+    // {
+    //     content: "MetaSpace: Metamorphic Testing for Spatial Cognition in Embodied Agents",
+    //     author: "Gengyang Xu, Dongwei Xiao, <ohln>Yiteng Peng</ohln>, and Shuai Wang.",
+    //     conf: "OOPSLA",
+    //     year: "2026",
+    //     rank: "CCF-A",
+    //     corresponding: ["Dongwei Xiao", "Yiteng Peng"],
+    // },
 ];
 
-// 获取包含这些内容的容器元素
+// Mark corresponding authors: append † after their name in the author string
+// `names` can be a string or an array of strings
+function markCorrespondingAuthor(authorHtml, names) {
+    if (!names) return authorHtml;
+    var list = Array.isArray(names) ? names : [names];
+    list.forEach(function(name) {
+        var escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        var re = new RegExp('(' + escaped + ')', 'g');
+        authorHtml = authorHtml.replace(re, '$1<sup class="corr-mark">†</sup>');
+    });
+    return authorHtml;
+}
+
 var container = document.getElementById("pubs_end");
 
-// 反转数组并遍历，实现倒序遍历
-publication_lists.reverse().forEach(function(item) {
-    var html = `
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-12">
-                <div class="atf-about-content atf-about-text atf-main-about wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
-                    <h3>${item.content}</h3>
-                    <h5>${item.author} <span class="gray-background">${item.conf}</span></h5>
-                </div>
-            </div>
-        </div>
-    `;
-    
+publication_lists.slice().reverse().forEach(function(item) {
+    var authorHtml = markCorrespondingAuthor(item.author, item.corresponding || null);
+
+    // Conference badge
+    var confBadge = '<span class="pub-conf-badge">'
+        + '<span class="pub-conf-name">' + item.conf + '</span>'
+        + '<span class="pub-conf-year">' + item.year + '</span>'
+        + '</span>';
+
+    // Rank badge
+    var rankBadge = item.rank
+        ? '<span class="pub-rank-badge pub-rank-ccfa">' + item.rank + '</span>'
+        : '';
+
+    // Paper button
+    var paperBtn = item.paper
+        ? '<a href="' + item.paper + '" target="_blank" class="pub-paper-btn"><i class="fas fa-file-alt"></i> Paper</a>'
+        : '';
+
+    var html = '<div class="row pub-item">'
+        + '<div class="col-lg-12 col-md-12 col-12">'
+        + '<div class="atf-about-content atf-about-text atf-main-about wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">'
+        + '<div class="pub-body">'
+        + '<h3 class="pub-title">' + item.content + '</h3>'
+        + '<p class="pub-authors">' + authorHtml + '</p>'
+        + '</div>'
+        + '<div class="pub-footer">' + confBadge + rankBadge + paperBtn + '</div>'
+        + '</div>'
+        + '</div>'
+        + '</div>';
+
     container.insertAdjacentHTML('beforebegin', html);
 });
