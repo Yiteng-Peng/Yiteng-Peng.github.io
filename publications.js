@@ -39,14 +39,14 @@ var publication_lists = [
         rank: "CCF-A",
         paper: "https://doi.org/10.1145/3719027.3765107",
     },
-    // {
-    //     content: "MetaSpace: Metamorphic Testing for Spatial Cognition in Embodied Agents",
-    //     author: "Gengyang Xu, Dongwei Xiao, <ohln>Yiteng Peng</ohln>, and Shuai Wang.",
-    //     conf: "OOPSLA",
-    //     year: "2026",
-    //     rank: "CCF-A",
-    //     corresponding: ["Dongwei Xiao", "Yiteng Peng"],
-    // },
+    {
+        content: "MetaSpace: Metamorphic Testing for Spatial Cognition in Embodied Agents",
+        author: "Gengyang Xu, Dongwei Xiao, <ohln>Yiteng Peng</ohln>, and Shuai Wang.",
+        conf: "OOPSLA",
+        year: "2026",
+        rank: "CCF-A",
+        corresponding: ["Dongwei Xiao", "Yiteng Peng"],
+    },
 ];
 
 // Mark corresponding authors: append † after their name in the author string
