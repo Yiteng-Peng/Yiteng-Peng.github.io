@@ -47,6 +47,13 @@ var publication_lists = [
         rank: "CCF-A",
         corresponding: ["Dongwei Xiao", "Yiteng Peng"],
     },
+    {
+        content: "When Optimizations Backfire: The Paradox of Plaintext Optimizations in Privacy-Preserving ML Compilers",
+        author: "Yichen Li, Jin Tan, Dongwei Xiao, <ohln>Yiteng Peng</ohln>, Pingchuan Ma, Junming Ma, Shoumeng Yan, Shuai Wang, and Fengwei Zhang",
+        conf: "ISSTA",
+        year: "2026",
+        rank: "CCF-A",
+    },
 ];
 
 // Mark corresponding authors: append † after their name in the author string
