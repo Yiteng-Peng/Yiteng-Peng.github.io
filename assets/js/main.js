@@ -101,21 +101,6 @@
 			
 
 			  
-		//**===================Typed-word ===================**//	
-		
-			var typed = new Typed('.typed-word', {
-				strings: ["Interested in Software Engineering", "Interested in Computer Security"],
-				typeSpeed: 40,
-				backSpeed: 40,
-				backDelay: 2000,
-				startDelay: 1500,
-				loop: true,
-				showCursor: true
-			});
-			
-		
-		
-			
 			 /* WOW Scroll Spy
 			========================================================*/
 			 var wow = new WOW({

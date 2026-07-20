@@ -56,6 +56,23 @@ var publication_lists = [
     },
 ];
 
+var preprint_lists = [
+    {
+        content: "Detecting and Understanding Vulnerabilities in Fully Homomorphic Encryption Frameworks",
+        author: "<ohln>Yiteng Peng</ohln>, Dongwei Xiao, Zhibo Liu, Zhenlan Ji, and Shuai Wang.",
+        conf: "arXiv",
+        year: "2026",
+        paper: "https://arxiv.org/abs/2606.22519",
+    },
+    {
+        content: "Programming-by-Example for Batch-Editing Collision Meshes in 3D Software",
+        author: "Gengyang Xu, Dongwei Xiao, Hengcheng Zhu, <ohln>Yiteng Peng</ohln>, Wei Meng, Shuai Wang, and Shing-Chi Cheung.",
+        conf: "arXiv",
+        year: "2026",
+        paper: "https://arxiv.org/abs/2607.08804",
+    },
+];
+
 // Mark corresponding authors: append † after their name in the author string
 // `names` can be a string or an array of strings
 function markCorrespondingAuthor(authorHtml, names) {
@@ -69,38 +86,44 @@ function markCorrespondingAuthor(authorHtml, names) {
     return authorHtml;
 }
 
-var container = document.getElementById("pubs_end");
+function renderPublicationList(items, markerId) {
+    var container = document.getElementById(markerId);
+    if (!container) return;
 
-publication_lists.slice().reverse().forEach(function(item) {
-    var authorHtml = markCorrespondingAuthor(item.author, item.corresponding || null);
+    items.slice().reverse().forEach(function(item) {
+        var authorHtml = markCorrespondingAuthor(item.author, item.corresponding || null);
 
-    // Conference badge
-    var confBadge = '<span class="pub-conf-badge">'
-        + '<span class="pub-conf-name">' + item.conf + '</span>'
-        + '<span class="pub-conf-year">' + item.year + '</span>'
-        + '</span>';
+        // Conference badge
+        var confBadge = '<span class="pub-conf-badge">'
+            + '<span class="pub-conf-name">' + item.conf + '</span>'
+            + '<span class="pub-conf-year">' + item.year + '</span>'
+            + '</span>';
 
-    // Rank badge
-    var rankBadge = item.rank
-        ? '<span class="pub-rank-badge pub-rank-ccfa">' + item.rank + '</span>'
-        : '';
+        // Rank badge
+        var rankBadge = item.rank
+            ? '<span class="pub-rank-badge pub-rank-ccfa">' + item.rank + '</span>'
+            : '';
 
-    // Paper button
-    var paperBtn = item.paper
-        ? '<a href="' + item.paper + '" target="_blank" class="pub-paper-btn"><i class="fas fa-file-alt"></i> Paper</a>'
-        : '';
+        // Paper button
+        var paperBtn = item.paper
+            ? '<a href="' + item.paper + '" target="_blank" class="pub-paper-btn"><i class="fas fa-file-alt"></i> Paper</a>'
+            : '';
 
-    var html = '<div class="row pub-item">'
-        + '<div class="col-lg-12 col-md-12 col-12">'
-        + '<div class="atf-about-content atf-about-text atf-main-about wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">'
-        + '<div class="pub-body">'
-        + '<h3 class="pub-title">' + item.content + '</h3>'
-        + '<p class="pub-authors">' + authorHtml + '</p>'
-        + '</div>'
-        + '<div class="pub-footer">' + confBadge + rankBadge + paperBtn + '</div>'
-        + '</div>'
-        + '</div>'
-        + '</div>';
+        var html = '<div class="row pub-item">'
+            + '<div class="col-lg-12 col-md-12 col-12">'
+            + '<div class="atf-about-content atf-about-text atf-main-about wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">'
+            + '<div class="pub-body">'
+            + '<h3 class="pub-title">' + item.content + '</h3>'
+            + '<p class="pub-authors">' + authorHtml + '</p>'
+            + '</div>'
+            + '<div class="pub-footer">' + confBadge + rankBadge + paperBtn + '</div>'
+            + '</div>'
+            + '</div>'
+            + '</div>';
 
-    container.insertAdjacentHTML('beforebegin', html);
-});
+        container.insertAdjacentHTML('beforebegin', html);
+    });
+}
+
+renderPublicationList(publication_lists, "pubs_end");
+renderPublicationList(preprint_lists, "preprints_end");

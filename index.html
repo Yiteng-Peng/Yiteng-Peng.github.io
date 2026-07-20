@@ -70,6 +70,7 @@
 						<ul class="navbar-nav">
 							<li class="menu-nav"><a class="nav-link page-scroll active" href="#home">Home</a></li>
 							<li class="menu-nav"><a class="nav-link page-scroll" href="#publication">Publication</a></li>
+							<li class="menu-nav"><a class="nav-link page-scroll" href="#preprint">Preprint</a></li>
 							<li class="menu-nav"><a class="nav-link page-scroll" href="#education">Education</a></li>
 							<li class="menu-nav"><a class="nav-link page-scroll" href="#teaching">Teaching</a></li>
 						</ul>
@@ -84,19 +85,16 @@
 			<div id="particles-js"></div>
 			<div class="container">
 				<div class="row atf-content-details align-items-center">
-					 <!--RIGHT COL-->
-					<div class="col-md-4 atf_home_img2 text-lg-center wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.4s" data-wow-offset="0">
-						<img src="assets/img/banner/pengyiteng.png" alt="portfolio" class="card-s">
+					<div class="col-md-3 atf_home_img2 text-center wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.4s" data-wow-offset="0">
+						<img src="assets/img/banner/pengyiteng.png" alt="Yiteng Peng" class="home-portrait">
 					</div><!--- END COL -->
 					
-					<!--LEFT COL-->
-					<div class="col-md-7 atf-single-details text-lg-left pl-lg-5">
-						<h5>Hi!😉</h5>
-						<h2 class="mb-0 d-block d-lg-block"><br/>I'm <strong>Yiteng Peng</strong><br/><br/> A Ph.D. Candidate in HKUST<br/> <span class="theme_gray"></span><span class="typed-word"></span> </h2>
-						<!-- Main-btn -->
-						<div class="atf-main-btn mt-4"> 
-							<a href="#first-elem" class="page-scroll atf-themes-btn mr-4">More!</a>
+					<div class="col-md-9 atf-single-details home-intro">
+						<div class="home-intro-line">
+							<h1>Yiteng Peng</h1>
+							<span class="home-affiliation">Ph.D. Candidate · CSE, HKUST</span>
 						</div>
+						<p class="home-bio">I am a Ph.D. candidate in Computer Science and Engineering at the Hong Kong University of Science and Technology (HKUST), advised by <a href="https://cse.hkust.edu.hk/~shuaiw/" target="_blank">Prof. Shuai Wang</a>. I received my B.E. in Computer Science from the University of Science and Technology of China (USTC). My research focuses on <strong>software testing, reliability, and security of privacy-enhancing technologies and AI systems.</strong></p>
 					</div><!--- END COL -->
 					
 				</div><!--- END ROW -->
@@ -114,14 +112,28 @@
                             <h2 class="">Publications</h2>
 							<div class="atf-sec_icon"><span></span><span class="atf-sec_radius"></span><span></span></div>
                         </div>
-						<div id="pubs_end"></div>
 						<p class="pub-legend"><sup class="corr-mark">†</sup>: Corresponding authors.</p>
+						<div id="pubs_end"></div>
                     </div>
                 </div>
 		</div>
 		</section>
 
-		<script src="./publications.js"></script>
+		<section id="preprint" class="atf-section-padding">
+			<div class="container">
+				<div class="row clearfix">
+					<div class="col-lg-12 col-md-12">
+						<div class="atf-section-title mb-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
+							<h2>Preprints</h2>
+							<div class="atf-sec_icon"><span></span><span class="atf-sec_radius"></span><span></span></div>
+						</div>
+						<div id="preprints_end"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="./publications.js?v=20260720"></script>
 
 		<!-- 用atf-section-padding可以多增加一些空隙 -->
 		<section id="education" class="atf-section">
@@ -283,8 +295,6 @@
 		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 		<!-- modernizer JS -->		
 		<script src="assets/js/modernizr.custom.js"></script>
-		<!-- Typed JS -->
-		<script src="assets/js/typed.js"></script>
 		<!-- owl-carousel min js  -->
 		<script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
 		<!-- jquery.appear js -->
