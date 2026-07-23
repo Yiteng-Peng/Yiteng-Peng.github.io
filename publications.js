@@ -46,6 +46,7 @@ var publication_lists = [
         year: "2026",
         rank: "CCF-A",
         corresponding: ["Dongwei Xiao", "Yiteng Peng"],
+        paper: "https://dl.acm.org/doi/10.1145/3798212",
     },
     {
         content: "When Optimizations Backfire: The Paradox of Plaintext Optimizations in Privacy-Preserving ML Compilers",
@@ -86,12 +87,16 @@ function markCorrespondingAuthor(authorHtml, names) {
     return authorHtml;
 }
 
-function renderPublicationList(items, markerId) {
+function renderPublicationList(items, markerId, numberPrefix) {
     var container = document.getElementById(markerId);
     if (!container) return;
 
-    items.slice().reverse().forEach(function(item) {
+    items.slice().reverse().forEach(function(item, index) {
         var authorHtml = markCorrespondingAuthor(item.author, item.corresponding || null);
+        var stableNumber = items.length - index;
+        var numberLabel = '<span class="pub-number">'
+            + (numberPrefix || '') + stableNumber
+            + '</span>';
 
         // Conference badge
         var confBadge = '<span class="pub-conf-badge">'
@@ -116,7 +121,7 @@ function renderPublicationList(items, markerId) {
             + '<h3 class="pub-title">' + item.content + '</h3>'
             + '<p class="pub-authors">' + authorHtml + '</p>'
             + '</div>'
-            + '<div class="pub-footer">' + confBadge + rankBadge + paperBtn + '</div>'
+            + '<div class="pub-footer">' + numberLabel + confBadge + rankBadge + paperBtn + '</div>'
             + '</div>'
             + '</div>'
             + '</div>';
@@ -125,5 +130,5 @@ function renderPublicationList(items, markerId) {
     });
 }
 
-renderPublicationList(publication_lists, "pubs_end");
-renderPublicationList(preprint_lists, "preprints_end");
+renderPublicationList(publication_lists, "pubs_end", "");
+renderPublicationList(preprint_lists, "preprints_end", "P");
